@@ -1926,24 +1926,16 @@
                 </div>
             </div>
 
-            <!-- Interactivo Mock Map Rendered completely in CSS for gorgeous look -->
-            <div class="map-card-wrapper">
-                <div class="map-view-mock">
-                    <div class="map-grid-decor"></div>
-                    <div class="map-marker-clinical">
-                        <i class="fas fa-hospital"></i>
-                    </div>
-                    <div class="map-marker-pulse"></div>
-                    <div
-                        style="position: absolute; bottom: 15px; left: 15px; background: rgba(0,0,0,0.7); color: white; padding: 4px 10px; border-radius: 4px; font-size: 0.75rem; z-index: 3;">
-                        Satélite, Ventanilla
-                    </div>
+            <!-- Interactive Google Maps iframe for real navigation -->
+            <div class="map-card-wrapper" style="overflow: hidden; display: flex; flex-direction: column; border-radius: 12px; box-shadow: 0 5px 20px rgba(0,0,0,0.1);">
+                <div style="width: 100%; height: 350px; position: relative;">
+                    <iframe src="https://maps.google.com/maps?q=Av.%20Pedro%20Beltr%C3%A1n%20175,%20Ventanilla,%20Callao&t=&z=16&ie=UTF8&iwloc=&output=embed" width="100%" height="100%" style="border:0; position: absolute; top:0; left:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
                 </div>
-                <div class="map-detail-bar">
+                <div class="map-detail-bar" style="background: white; padding: 15px 20px; display: flex; justify-content: space-between; align-items: center; border-top: 1px solid #eee;">
                     <span class="map-detail-text"><i class="fas fa-location-arrow text-primary mr-1"></i> Referencia:
                         Frente a la Comisaría</span>
-                    <a href="https://maps.google.com" target="_blank" class="specialty-link"
-                        style="font-size: 0.75rem;">Cómo llegar <i class="fas fa-external-link-alt"></i></a>
+                    <a href="https://maps.google.com/maps?q=Av.%20Pedro%20Beltr%C3%A1n%20175,%20Ventanilla,%20Callao" target="_blank" class="specialty-link"
+                        style="font-size: 0.85rem; font-weight: bold; text-decoration: none;">Abrir en App <i class="fas fa-external-link-alt"></i></a>
                 </div>
             </div>
         </div>
