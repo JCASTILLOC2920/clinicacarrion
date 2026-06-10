@@ -1367,6 +1367,158 @@
                 grid-column: span 1;
             }
         }
+        /* 5. Alianza Estratégica JC PATH LAB */
+        .partnership-section {
+            background: linear-gradient(135deg, var(--dark) 0%, var(--dark-blue) 100%);
+            color: var(--white);
+            padding: 5rem 0;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .partnership-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 50%;
+            height: 100%;
+            background: radial-gradient(circle at right, rgba(0, 180, 216, 0.15) 0%, transparent 60%);
+            pointer-events: none;
+        }
+
+        .partnership-container {
+            display: flex;
+            align-items: center;
+            gap: 4rem;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 1.5rem;
+            position: relative;
+            z-index: 2;
+        }
+
+        .partnership-content {
+            flex: 1;
+        }
+
+        .partnership-badge {
+            background-color: rgba(16, 185, 129, 0.2);
+            color: var(--success);
+            padding: 0.5rem 1.25rem;
+            border-radius: 50px;
+            font-size: 0.8rem;
+            font-weight: 800;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+            display: inline-block;
+            margin-bottom: 1.5rem;
+            border: 1px solid rgba(16, 185, 129, 0.3);
+        }
+
+        .partnership-title {
+            font-size: 2.5rem;
+            color: var(--white);
+            margin-bottom: 1.5rem;
+            line-height: 1.2;
+        }
+
+        .partnership-title span {
+            color: var(--secondary);
+            font-weight: 800;
+        }
+
+        .partnership-text {
+            color: var(--gray-300);
+            font-size: 1.1rem;
+            line-height: 1.7;
+            margin-bottom: 2rem;
+        }
+
+        .partnership-logo-box {
+            flex: 0 0 380px;
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 24px;
+            padding: 3rem;
+            text-align: center;
+            backdrop-filter: blur(10px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+            transition: var(--transition);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .partnership-logo-box::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 4px;
+            background: linear-gradient(90deg, var(--secondary), var(--success));
+        }
+
+        .partnership-logo-box:hover {
+            transform: translateY(-5px);
+            background: rgba(255, 255, 255, 0.05);
+            border-color: rgba(255, 255, 255, 0.2);
+        }
+
+        .partnership-logo-text {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 2.2rem;
+            font-weight: 800;
+            color: var(--white);
+            letter-spacing: -1px;
+            margin-bottom: 0.5rem;
+        }
+
+        .partnership-logo-sub {
+            color: var(--secondary);
+            font-weight: 700;
+            font-size: 0.9rem;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            margin-bottom: 2rem;
+        }
+
+        .partnership-features {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+            text-align: left;
+        }
+
+        .p-feature {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            color: var(--gray-200);
+            font-size: 0.95rem;
+        }
+
+        .p-feature i {
+            color: var(--success);
+            font-size: 1.2rem;
+        }
+
+        @media (max-width: 992px) {
+            .partnership-container {
+                flex-direction: column;
+                text-align: center;
+                gap: 3rem;
+            }
+            .partnership-logo-box {
+                flex: none;
+                width: 100%;
+                max-width: 450px;
+            }
+            .partnership-features {
+                text-align: center;
+                align-items: center;
+            }
+        }
     </style>
 </head>
 <body>
@@ -1619,6 +1771,48 @@
                     <a href="#reserva" class="specialty-link">Reservar Cita <i class="fas fa-arrow-right"></i></a>
                 </div>
 
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección Alianza Estratégica JC PATH LAB -->
+    <section class="partnership-section" id="laboratorio-jcpath">
+        <div class="partnership-container">
+            <div class="partnership-content">
+                <div class="partnership-badge">
+                    <i class="fas fa-microscope"></i> Alianza Estratégica Clínica
+                </div>
+                <h2 class="partnership-title">Trabajamos en conjunto con <span>JC PATH LAB</span></h2>
+                <p class="partnership-text">
+                    En la Clínica Carrión nos enorgullece procesar nuestras muestras de mayor complejidad con <strong>JC PATH LAB</strong>, el laboratorio de Anatomía Patológica líder en Lima Norte dirigido por el prestigioso patólogo <strong>Dr. Josehp Castillo</strong>. 
+                </p>
+                <p class="partnership-text">
+                    Esta alianza estratégica nos permite garantizar diagnósticos oncológicos precisos, rápidos y definitivos, empleando tecnología de punta y estándares internacionales para salvaguardar la vida de nuestros pacientes.
+                </p>
+                
+                <a href="https://jcastilloc2920.github.io/" target="_blank" class="btn-primary" style="margin-top: 1rem; border-radius: 50px; padding: 1rem 2.5rem;">
+                    Visitar JC PATH LAB <i class="fas fa-external-link-alt"></i>
+                </a>
+            </div>
+
+            <div class="partnership-logo-box">
+                <div class="partnership-logo-text">JC PATH LAB</div>
+                <div class="partnership-logo-sub">Anatomía Patológica</div>
+                
+                <div class="partnership-features">
+                    <div class="p-feature">
+                        <i class="fas fa-check-circle"></i> Biopsias de Alta Complejidad
+                    </div>
+                    <div class="p-feature">
+                        <i class="fas fa-check-circle"></i> Inmunohistoquímica
+                    </div>
+                    <div class="p-feature">
+                        <i class="fas fa-check-circle"></i> Resultados en 3 a 4 días
+                    </div>
+                    <div class="p-feature">
+                        <i class="fas fa-check-circle"></i> Diagnóstico Oncológico
+                    </div>
+                </div>
             </div>
         </div>
     </section>
