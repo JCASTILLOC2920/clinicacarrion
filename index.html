@@ -1,26 +1,33 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Clínica Carrión Ventanilla - Cuidado Médico con Excelencia</title>
-    
+
     <!-- SEO Meta Tags -->
-    <meta name="description" content="Clínica Carrión de Ventanilla - Más de 25 años brindando atención médica de alta calidad en medicina general, especialidades, odontología y laboratorio. Av. Pedro Beltrán 175, Satélite.">
-    <meta name="keywords" content="clinica carrion ventanilla, policlinico carrion ventanilla, clinica satelite ventanilla, salud ventanilla, medicos ventanilla, callao clinica">
+    <meta name="description"
+        content="Clínica Carrión de Ventanilla - Más de 25 años brindando atención médica de alta calidad en medicina general, especialidades, odontología y laboratorio. Av. Pedro Beltrán 175, Satélite.">
+    <meta name="keywords"
+        content="clinica carrion ventanilla, policlinico carrion ventanilla, clinica satelite ventanilla, salud ventanilla, medicos ventanilla, callao clinica">
 
     <!-- Fonts & Icons -->
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&family=Inter:wght@300;400;500;600;700&display=swap">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&family=Inter:wght@300;400;500;600;700&display=swap">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-    
+
     <!-- CSS Estilos de Lujo Premium (Soberano, Limpio y Reactivo) -->
     <style>
         :root {
-            --primary: #0f4c81; /* Royal Blue */
+            --primary: #0f4c81;
+            /* Royal Blue */
             --primary-light: #1b74e4;
-            --secondary: #00b4d8; /* Teal Accent */
+            --secondary: #00b4d8;
+            /* Teal Accent */
             --secondary-dark: #0077b6;
-            --dark: #0d1b2a; /* Deep Navy */
+            --dark: #0d1b2a;
+            /* Deep Navy */
             --dark-blue: #1b263b;
             --light: #f8f9fa;
             --white: #ffffff;
@@ -60,7 +67,12 @@
             --gray-700: #cbd5e1;
         }
 
-        h1, h2, h3, h4, h5, h6 {
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
             font-family: 'Montserrat', sans-serif;
             font-weight: 700;
             color: var(--dark);
@@ -68,7 +80,12 @@
             transition: var(--transition);
         }
 
-        body.dark-theme h1, body.dark-theme h2, body.dark-theme h3, body.dark-theme h4, body.dark-theme h5, body.dark-theme h6 {
+        body.dark-theme h1,
+        body.dark-theme h2,
+        body.dark-theme h3,
+        body.dark-theme h4,
+        body.dark-theme h5,
+        body.dark-theme h6 {
             color: var(--white);
         }
 
@@ -182,7 +199,8 @@
             padding: 0.5rem 0;
         }
 
-        .nav-link:hover, .nav-link.active {
+        .nav-link:hover,
+        .nav-link.active {
             color: var(--primary-light);
         }
 
@@ -197,7 +215,8 @@
             transition: var(--transition);
         }
 
-        .nav-link:hover::after, .nav-link.active::after {
+        .nav-link:hover::after,
+        .nav-link.active::after {
             width: 100%;
         }
 
@@ -246,7 +265,7 @@
         .hero {
             padding: 180px 0 100px 0;
             background: radial-gradient(circle at 80% 20%, rgba(0, 180, 216, 0.1) 0%, transparent 60%),
-                        linear-gradient(135deg, var(--white) 0%, var(--gray-100) 100%);
+                linear-gradient(135deg, var(--white) 0%, var(--gray-100) 100%);
             position: relative;
             overflow: hidden;
             transition: var(--transition);
@@ -254,7 +273,7 @@
 
         body.dark-theme .hero {
             background: radial-gradient(circle at 80% 20%, rgba(0, 180, 216, 0.12) 0%, transparent 60%),
-                        linear-gradient(135deg, #0d131f 0%, #151e2e 100%);
+                linear-gradient(135deg, #0d131f 0%, #151e2e 100%);
         }
 
         .hero-grid {
@@ -319,20 +338,45 @@
             color: white;
             text-decoration: none;
             padding: 0.9rem 2rem;
-            border-radius: var(--border-radius);
+            border-radius: 50px;
             font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
             box-shadow: 0 4px 15px rgba(15, 76, 129, 0.3);
-            transition: var(--transition);
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
             border: none;
             display: inline-flex;
             align-items: center;
             gap: 0.5rem;
             cursor: pointer;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .btn-primary::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 150%;
+            height: 150%;
+            background: radial-gradient(circle, rgba(255,255,255,0.3) 0%, transparent 60%);
+            transform: translate(-50%, -50%) scale(0);
+            transition: transform 0.5s ease-out;
         }
 
         .btn-primary:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 8px 25px rgba(27, 116, 228, 0.45);
+            transform: translateY(-3px) scale(1.02);
+            box-shadow: 0 10px 25px rgba(27, 116, 228, 0.5), 0 0 15px rgba(0, 180, 216, 0.3);
+            background: linear-gradient(135deg, var(--primary-light), var(--primary));
+        }
+
+        .btn-primary:hover::before {
+            transform: translate(-50%, -50%) scale(1);
+        }
+
+        .btn-primary:active {
+            transform: translateY(1px);
         }
 
         .btn-outline {
@@ -386,11 +430,25 @@
         }
 
         @keyframes morphing-bg {
-            0% { border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%; }
-            25% { border-radius: 58% 42% 75% 25% / 76% 46% 54% 24%; }
-            50% { border-radius: 50% 50% 33% 67% / 55% 27% 73% 45%; }
-            75% { border-radius: 33% 67% 58% 42% / 63% 68% 32% 37%; }
-            100% { border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%; }
+            0% {
+                border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
+            }
+
+            25% {
+                border-radius: 58% 42% 75% 25% / 76% 46% 54% 24%;
+            }
+
+            50% {
+                border-radius: 50% 50% 33% 67% / 55% 27% 73% 45%;
+            }
+
+            75% {
+                border-radius: 33% 67% 58% 42% / 63% 68% 32% 37%;
+            }
+
+            100% {
+                border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
+            }
         }
 
         /* Mock Clínica Carrion Image (Soberano CSS Drawing / High Tech Card) */
@@ -450,9 +508,17 @@
         }
 
         @keyframes pulse-glow {
-            0% { box-shadow: 0 0 0 0 rgba(16, 185, 129, 0.4); }
-            70% { box-shadow: 0 0 0 10px rgba(16, 185, 129, 0); }
-            100% { box-shadow: 0 0 0 0 rgba(16, 185, 129, 0); }
+            0% {
+                box-shadow: 0 0 0 0 rgba(16, 185, 129, 0.4);
+            }
+
+            70% {
+                box-shadow: 0 0 0 10px rgba(16, 185, 129, 0);
+            }
+
+            100% {
+                box-shadow: 0 0 0 0 rgba(16, 185, 129, 0);
+            }
         }
 
         .clinic-card-detail {
@@ -527,8 +593,13 @@
         }
 
         @keyframes float-slow {
-            0% { transform: translateY(0); }
-            100% { transform: translateY(-10px); }
+            0% {
+                transform: translateY(0);
+            }
+
+            100% {
+                transform: translateY(-10px);
+            }
         }
 
         .floating-stat-icon {
@@ -701,7 +772,8 @@
             color: var(--gray-700);
         }
 
-        .filter-btn:hover, .filter-btn.active {
+        .filter-btn:hover,
+        .filter-btn.active {
             background-color: var(--primary);
             color: white;
             border-color: var(--primary);
@@ -851,7 +923,7 @@
             position: absolute;
             width: 300px;
             height: 300px;
-            background: radial-gradient(circle, rgba(255,255,255,0.1) 0%, transparent 70%);
+            background: radial-gradient(circle, rgba(255, 255, 255, 0.1) 0%, transparent 70%);
             top: -100px;
             right: -100px;
             border-radius: 50%;
@@ -1007,8 +1079,15 @@
         }
 
         @keyframes slide-up {
-            from { opacity: 0; transform: translateY(20px); }
-            to { opacity: 1; transform: translateY(0); }
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
         }
 
         .admin-panel-header {
@@ -1031,7 +1110,8 @@
             text-align: left;
         }
 
-        .admin-table th, .admin-table td {
+        .admin-table th,
+        .admin-table td {
             padding: 0.75rem 1rem;
             border-bottom: 1px solid var(--gray-200);
         }
@@ -1157,7 +1237,7 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background-image: 
+            background-image:
                 radial-gradient(var(--gray-300) 1px, transparent 0),
                 radial-gradient(var(--gray-300) 1px, transparent 0);
             background-size: 20px 20px;
@@ -1182,8 +1262,13 @@
         }
 
         @keyframes bounce-marker {
-            0% { transform: translateY(0) rotate(-45deg); }
-            100% { transform: translateY(-10px) rotate(-45deg); }
+            0% {
+                transform: translateY(0) rotate(-45deg);
+            }
+
+            100% {
+                transform: translateY(-10px) rotate(-45deg);
+            }
         }
 
         .map-marker-clinical i {
@@ -1203,8 +1288,15 @@
         }
 
         @keyframes pulse-shadow {
-            0% { transform: scale(1); opacity: 0.5; }
-            100% { transform: scale(1.5); opacity: 0.1; }
+            0% {
+                transform: scale(1);
+                opacity: 0.5;
+            }
+
+            100% {
+                transform: scale(1.5);
+                opacity: 0.1;
+            }
         }
 
         .map-detail-bar {
@@ -1328,199 +1420,63 @@
 
         /* 9. Responsive Breakpoints */
         @media (max-width: 1024px) {
-            .benefits-grid, .specialties-grid {
+
+            .benefits-grid,
+            .specialties-grid {
                 grid-template-columns: repeat(2, 1fr);
             }
+
             .booking-box {
                 grid-template-columns: 1fr;
             }
+
             .footer-grid {
                 grid-template-columns: 1fr 1fr;
             }
         }
 
         @media (max-width: 768px) {
-            .hero-grid, .contact-grid {
+
+            .hero-grid,
+            .contact-grid {
                 grid-template-columns: 1fr;
             }
+
             .nav-menu {
-                display: none; /* Simplificado para evitar colapsos complejos en demo */
+                display: none;
+                /* Simplificado para evitar colapsos complejos en demo */
             }
+
             .hero-title {
                 font-size: 2.3rem;
             }
-            .benefits-grid, .specialties-grid {
+
+            .benefits-grid,
+            .specialties-grid {
                 grid-template-columns: 1fr;
             }
+
             .footer-grid {
                 grid-template-columns: 1fr;
             }
+
             .footer-bottom {
                 flex-direction: column;
                 gap: 1rem;
                 text-align: center;
             }
+
             .form-grid {
                 grid-template-columns: 1fr;
             }
+
             .form-group-full {
                 grid-column: span 1;
             }
         }
-        /* 5. Alianza Estratégica JC PATH LAB */
-        .partnership-section {
-            background: linear-gradient(135deg, var(--dark) 0%, var(--dark-blue) 100%);
-            color: var(--white);
-            padding: 5rem 0;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .partnership-section::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            right: 0;
-            width: 50%;
-            height: 100%;
-            background: radial-gradient(circle at right, rgba(0, 180, 216, 0.15) 0%, transparent 60%);
-            pointer-events: none;
-        }
-
-        .partnership-container {
-            display: flex;
-            align-items: center;
-            gap: 4rem;
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 1.5rem;
-            position: relative;
-            z-index: 2;
-        }
-
-        .partnership-content {
-            flex: 1;
-        }
-
-        .partnership-badge {
-            background-color: rgba(16, 185, 129, 0.2);
-            color: var(--success);
-            padding: 0.5rem 1.25rem;
-            border-radius: 50px;
-            font-size: 0.8rem;
-            font-weight: 800;
-            letter-spacing: 1.5px;
-            text-transform: uppercase;
-            display: inline-block;
-            margin-bottom: 1.5rem;
-            border: 1px solid rgba(16, 185, 129, 0.3);
-        }
-
-        .partnership-title {
-            font-size: 2.5rem;
-            color: var(--white);
-            margin-bottom: 1.5rem;
-            line-height: 1.2;
-        }
-
-        .partnership-title span {
-            color: var(--secondary);
-            font-weight: 800;
-        }
-
-        .partnership-text {
-            color: var(--gray-300);
-            font-size: 1.1rem;
-            line-height: 1.7;
-            margin-bottom: 2rem;
-        }
-
-        .partnership-logo-box {
-            flex: 0 0 380px;
-            background: rgba(255, 255, 255, 0.03);
-            border: 1px solid rgba(255, 255, 255, 0.1);
-            border-radius: 24px;
-            padding: 3rem;
-            text-align: center;
-            backdrop-filter: blur(10px);
-            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
-            transition: var(--transition);
-            position: relative;
-            overflow: hidden;
-        }
-
-        .partnership-logo-box::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 4px;
-            background: linear-gradient(90deg, var(--secondary), var(--success));
-        }
-
-        .partnership-logo-box:hover {
-            transform: translateY(-5px);
-            background: rgba(255, 255, 255, 0.05);
-            border-color: rgba(255, 255, 255, 0.2);
-        }
-
-        .partnership-logo-text {
-            font-family: 'Montserrat', sans-serif;
-            font-size: 2.2rem;
-            font-weight: 800;
-            color: var(--white);
-            letter-spacing: -1px;
-            margin-bottom: 0.5rem;
-        }
-
-        .partnership-logo-sub {
-            color: var(--secondary);
-            font-weight: 700;
-            font-size: 0.9rem;
-            letter-spacing: 2px;
-            text-transform: uppercase;
-            margin-bottom: 2rem;
-        }
-
-        .partnership-features {
-            display: flex;
-            flex-direction: column;
-            gap: 1rem;
-            text-align: left;
-        }
-
-        .p-feature {
-            display: flex;
-            align-items: center;
-            gap: 1rem;
-            color: var(--gray-200);
-            font-size: 0.95rem;
-        }
-
-        .p-feature i {
-            color: var(--success);
-            font-size: 1.2rem;
-        }
-
-        @media (max-width: 992px) {
-            .partnership-container {
-                flex-direction: column;
-                text-align: center;
-                gap: 3rem;
-            }
-            .partnership-logo-box {
-                flex: none;
-                width: 100%;
-                max-width: 450px;
-            }
-            .partnership-features {
-                text-align: center;
-                align-items: center;
-            }
-        }
     </style>
 </head>
+
 <body>
 
     <!-- Header / Navbar -->
@@ -1535,7 +1491,7 @@
                     <span class="logo-sub">Ventanilla</span>
                 </div>
             </a>
-            
+
             <ul class="nav-menu">
                 <li><a href="#inicio" class="nav-link active">Inicio</a></li>
                 <li><a href="#beneficios" class="nav-link">Beneficios</a></li>
@@ -1563,13 +1519,16 @@
                     <i class="fas fa-medal"></i> Desde 1998 sirviendo a Ventanilla
                 </div>
                 <h1 class="hero-title">Tu salud en las mejores manos, <span>cerca de ti.</span></h1>
-                <p class="hero-text">En la Clínica Carrión de Ventanilla nos comprometemos con tu bienestar. Brindamos servicios médicos ambulatorios y odontológicos con la calidez y experiencia que tu familia merece.</p>
+                <p class="hero-text">En la Clínica Carrión de Ventanilla nos comprometemos con tu bienestar. Brindamos
+                    servicios médicos ambulatorios y odontológicos con la calidez y experiencia que tu familia merece.
+                </p>
                 <div class="hero-buttons">
                     <a href="#reserva" class="btn-primary"><i class="far fa-calendar-check"></i> Reservar una Cita</a>
-                    <a href="#especialidades" class="btn-outline">Ver Especialidades <i class="fas fa-chevron-right"></i></a>
+                    <a href="#especialidades" class="btn-outline">Ver Especialidades <i
+                            class="fas fa-chevron-right"></i></a>
                 </div>
             </div>
-            
+
             <div class="hero-image-wrapper">
                 <div class="hero-img-backdrop"></div>
                 <!-- CSS Clinical Render Card -->
@@ -1619,7 +1578,8 @@
                 </div>
 
                 <div class="hero-floating-stat floating-stat-2">
-                    <div class="floating-stat-icon" style="background-color: rgba(0, 180, 216, 0.1); color: var(--secondary-dark);">
+                    <div class="floating-stat-icon"
+                        style="background-color: rgba(0, 180, 216, 0.1); color: var(--secondary-dark);">
                         <i class="fas fa-smile"></i>
                     </div>
                     <div class="floating-stat-text">
@@ -1639,7 +1599,7 @@
                 <h2 class="section-title">Servicio clínico pensado en tu bienestar</h2>
                 <div class="header-decor-line"></div>
             </div>
-            
+
             <div class="benefits-grid">
                 <div class="benefit-card">
                     <div class="benefit-card-icon">
@@ -1681,16 +1641,17 @@
                 <h2 class="section-title">Cuidado Integral en todas las áreas de la salud</h2>
                 <div class="header-decor-line"></div>
             </div>
-            
+
             <div class="specialty-filters">
                 <button class="filter-btn active" onclick="filtrarEspecialidades('todas')">Todas</button>
                 <button class="filter-btn" onclick="filtrarEspecialidades('consultas')">Consultas</button>
                 <button class="filter-btn" onclick="filtrarEspecialidades('dental')">Odontología</button>
-                <button class="filter-btn" onclick="filtrarEspecialidades('analisis')">Diagnóstico y Laboratorio</button>
+                <button class="filter-btn" onclick="filtrarEspecialidades('analisis')">Diagnóstico y
+                    Laboratorio</button>
             </div>
-            
+
             <div class="specialties-grid" id="specialtiesGrid">
-                
+
                 <!-- Tarjeta 1 -->
                 <div class="specialty-card" data-cat="consultas">
                     <div class="specialty-icon-wrapper">
@@ -1717,7 +1678,8 @@
                         <i class="fas fa-baby"></i>
                     </div>
                     <h3>Pediatría</h3>
-                    <p>Control del crecimiento y desarrollo del niño sano, vacunas y atención de patologías infantiles.</p>
+                    <p>Control del crecimiento y desarrollo del niño sano, vacunas y atención de patologías infantiles.
+                    </p>
                     <a href="#reserva" class="specialty-link">Reservar Cita <i class="fas fa-arrow-right"></i></a>
                 </div>
 
@@ -1757,7 +1719,8 @@
                         <i class="fas fa-x-ray"></i>
                     </div>
                     <h3>Ecografías</h3>
-                    <p>Estudios ecográficos abdominales, pélvicos, obstétricos y de partes blandas de última generación.</p>
+                    <p>Estudios ecográficos abdominales, pélvicos, obstétricos y de partes blandas de última generación.
+                    </p>
                     <a href="#reserva" class="specialty-link">Reservar Cita <i class="fas fa-arrow-right"></i></a>
                 </div>
 
@@ -1775,48 +1738,6 @@
         </div>
     </section>
 
-    <!-- Sección Alianza Estratégica JC PATH LAB -->
-    <section class="partnership-section" id="laboratorio-jcpath">
-        <div class="partnership-container">
-            <div class="partnership-content">
-                <div class="partnership-badge">
-                    <i class="fas fa-microscope"></i> Alianza Estratégica Clínica
-                </div>
-                <h2 class="partnership-title">Trabajamos en conjunto con <span>JC PATH LAB</span></h2>
-                <p class="partnership-text">
-                    En la Clínica Carrión nos enorgullece procesar nuestras muestras de mayor complejidad con <strong>JC PATH LAB</strong>, el laboratorio de Anatomía Patológica líder en Lima Norte dirigido por el prestigioso patólogo <strong>Dr. Josehp Castillo</strong>. 
-                </p>
-                <p class="partnership-text">
-                    Esta alianza estratégica nos permite garantizar diagnósticos oncológicos precisos, rápidos y definitivos, empleando tecnología de punta y estándares internacionales para salvaguardar la vida de nuestros pacientes.
-                </p>
-                
-                <a href="https://jcastilloc2920.github.io/" target="_blank" class="btn-primary" style="margin-top: 1rem; border-radius: 50px; padding: 1rem 2.5rem;">
-                    Visitar JC PATH LAB <i class="fas fa-external-link-alt"></i>
-                </a>
-            </div>
-
-            <div class="partnership-logo-box">
-                <div class="partnership-logo-text">JC PATH LAB</div>
-                <div class="partnership-logo-sub">Anatomía Patológica</div>
-                
-                <div class="partnership-features">
-                    <div class="p-feature">
-                        <i class="fas fa-check-circle"></i> Biopsias de Alta Complejidad
-                    </div>
-                    <div class="p-feature">
-                        <i class="fas fa-check-circle"></i> Inmunohistoquímica
-                    </div>
-                    <div class="p-feature">
-                        <i class="fas fa-check-circle"></i> Resultados en 3 a 4 días
-                    </div>
-                    <div class="p-feature">
-                        <i class="fas fa-check-circle"></i> Diagnóstico Oncológico
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
     <!-- Sección 4: Reserva de Citas Interactiva -->
     <section class="section-padding booking" id="reserva">
         <div class="container">
@@ -1825,7 +1746,7 @@
                 <h2 class="section-title">Reserva tu cita médica en pocos pasos</h2>
                 <div class="header-decor-line"></div>
             </div>
-            
+
             <div class="booking-box">
                 <!-- Panel Informativo Izquierdo -->
                 <div class="booking-info-panel">
@@ -1855,9 +1776,10 @@
                             </div>
                         </div>
                     </div>
-                    
+
                     <div class="booking-info-footer">
-                        <i class="fas fa-info-circle mr-1"></i> Una vez enviada tu solicitud, nuestro equipo confirmará tu cita vía telefónica o WhatsApp en un plazo de 30 minutos.
+                        <i class="fas fa-info-circle mr-1"></i> Una vez enviada tu solicitud, nuestro equipo confirmará
+                        tu cita vía telefónica o WhatsApp en un plazo de 30 minutos.
                     </div>
                 </div>
 
@@ -1867,11 +1789,13 @@
                         <div class="form-grid">
                             <div class="form-group">
                                 <label class="form-label" for="pacienteNombre">Nombre Completo del Paciente</label>
-                                <input type="text" id="pacienteNombre" class="form-control" placeholder="Ej: José Castillo" required>
+                                <input type="text" id="pacienteNombre" class="form-control"
+                                    placeholder="Ej: José Castillo" required>
                             </div>
                             <div class="form-group">
                                 <label class="form-label" for="pacienteTelefono">Número de Celular</label>
-                                <input type="tel" id="pacienteTelefono" class="form-control" placeholder="Ej: 987654321" required>
+                                <input type="tel" id="pacienteTelefono" class="form-control" placeholder="Ej: 987654321"
+                                    required>
                             </div>
                             <div class="form-group">
                                 <label class="form-label" for="pacienteEspecialidad">Especialidad</label>
@@ -1890,21 +1814,27 @@
                                 <input type="date" id="pacienteFecha" class="form-control" required>
                             </div>
                             <div class="form-group form-group-full">
-                                <label class="form-label" for="pacienteSintomas">Notas Clínicas o Síntomas (Opcional)</label>
-                                <textarea id="pacienteSintomas" class="form-control" rows="3" placeholder="Describe brevemente el motivo de tu consulta médica..."></textarea>
+                                <label class="form-label" for="pacienteSintomas">Notas Clínicas o Síntomas
+                                    (Opcional)</label>
+                                <textarea id="pacienteSintomas" class="form-control" rows="3"
+                                    placeholder="Describe brevemente el motivo de tu consulta médica..."></textarea>
                             </div>
                         </div>
-                        
-                        <button type="submit" class="btn-primary" style="width: 100%; justify-content: center; font-size: 1rem;">
+
+                        <button type="submit" class="btn-primary"
+                            style="width: 100%; justify-content: center; font-size: 1rem;">
                             <i class="far fa-paper-plane"></i> Enviar Solicitud de Cita
                         </button>
                     </form>
 
                     <!-- Mensaje de éxito interactivo -->
-                    <div id="bookingSuccessMessage" style="display: none; margin-top: 1.5rem; padding: 1rem; border-radius: var(--border-radius); background-color: rgba(16, 185, 129, 0.1); border: 1px solid var(--success); color: var(--success); text-align: center;">
+                    <div id="bookingSuccessMessage"
+                        style="display: none; margin-top: 1.5rem; padding: 1rem; border-radius: var(--border-radius); background-color: rgba(16, 185, 129, 0.1); border: 1px solid var(--success); color: var(--success); text-align: center;">
                         <i class="fas fa-check-circle style-font-size: 1.5rem; margin-bottom: 0.5rem;"></i>
-                        <h4 class="margin-bottom-2px" style="color: var(--success) !important;">¡Solicitud Registrada con Éxito!</h4>
-                        <p class="margin-bottom-0" style="font-size: 0.85rem;">Tu código de reserva provisional es <strong id="bookingCode">BP-0000</strong>. Nos comunicaremos contigo en breves minutos.</p>
+                        <h4 class="margin-bottom-2px" style="color: var(--success) !important;">¡Solicitud Registrada
+                            con Éxito!</h4>
+                        <p class="margin-bottom-0" style="font-size: 0.85rem;">Tu código de reserva provisional es
+                            <strong id="bookingCode">BP-0000</strong>. Nos comunicaremos contigo en breves minutos.</p>
                     </div>
                 </div>
             </div>
@@ -1919,8 +1849,10 @@
             <!-- Admin Receptionist Panel -->
             <div id="adminPanel" class="admin-panel">
                 <div class="admin-panel-header">
-                    <h3 class="margin-bottom-0" style="font-size: 1.25rem;"><i class="fas fa-user-shield mr-2"></i> Gestión de Citas Recibidas (Modo Local)</h3>
-                    <button class="btn-outline" style="padding: 0.4rem 1rem; font-size: 0.75rem;" onclick="limpiarCitas();">
+                    <h3 class="margin-bottom-0" style="font-size: 1.25rem;"><i class="fas fa-user-shield mr-2"></i>
+                        Gestión de Citas Recibidas (Modo Local)</h3>
+                    <button class="btn-outline" style="padding: 0.4rem 1rem; font-size: 0.75rem;"
+                        onclick="limpiarCitas();">
                         <i class="fas fa-trash-alt mr-1"></i> Borrar Citas
                     </button>
                 </div>
@@ -1939,7 +1871,8 @@
                         </thead>
                         <tbody id="adminTableBody">
                             <tr>
-                                <td colspan="7" class="text-center text-muted" style="padding: 2rem;">No hay citas registradas en el navegador local. Realiza una reserva arriba.</td>
+                                <td colspan="7" class="text-center text-muted" style="padding: 2rem;">No hay citas
+                                    registradas en el navegador local. Realiza una reserva arriba.</td>
                             </tr>
                         </tbody>
                     </table>
@@ -1958,15 +1891,17 @@
                     <h2 class="section-title">Estamos muy cerca de ti en Ventanilla</h2>
                     <div class="header-decor-line" style="margin: 1rem 0 0 0;"></div>
                 </div>
-                <p class="text-muted">Nuestra sede se encuentra ubicada en una zona estratégica de Ciudad Satélite, con fácil acceso y frente a la Comisaría de Ventanilla para tu mayor seguridad y comodidad.</p>
-                
+                <p class="text-muted">Nuestra sede se encuentra ubicada en una zona estratégica de Ciudad Satélite, con
+                    fácil acceso y frente a la Comisaría de Ventanilla para tu mayor seguridad y comodidad.</p>
+
                 <div class="contact-card-item">
                     <div class="contact-icon-box">
                         <i class="fas fa-map-marked-alt"></i>
                     </div>
                     <div>
                         <h4>Ubicación Sede Central</h4>
-                        <p>Av. Pedro Beltrán Nro. 175, Urb. Ciudad Satélite, Ventanilla, Callao (Frente a la Comisaría)</p>
+                        <p>Av. Pedro Beltrán Nro. 175, Urb. Ciudad Satélite, Ventanilla, Callao (Frente a la Comisaría)
+                        </p>
                     </div>
                 </div>
 
@@ -1993,21 +1928,22 @@
 
             <!-- Interactivo Mock Map Rendered completely in CSS for gorgeous look -->
             <div class="map-card-wrapper">
-                <div class="map-view-mock" style="padding: 0; overflow: hidden; border-radius: 12px 12px 0 0;">
-                    <iframe 
-                        src="https://maps.google.com/maps?q=Av.%20Pedro%20Beltr%C3%A1n%20175,%20Ventanilla,%20Callao,%20Peru&t=&z=16&ie=UTF8&iwloc=&output=embed" 
-                        width="100%" 
-                        height="100%" 
-                        frameborder="0" 
-                        style="border:0; position: absolute; top: 0; left: 0; width: 100%; height: 100%;" 
-                        allowfullscreen="" 
-                        aria-hidden="false" 
-                        tabindex="0">
-                    </iframe>
+                <div class="map-view-mock">
+                    <div class="map-grid-decor"></div>
+                    <div class="map-marker-clinical">
+                        <i class="fas fa-hospital"></i>
+                    </div>
+                    <div class="map-marker-pulse"></div>
+                    <div
+                        style="position: absolute; bottom: 15px; left: 15px; background: rgba(0,0,0,0.7); color: white; padding: 4px 10px; border-radius: 4px; font-size: 0.75rem; z-index: 3;">
+                        Satélite, Ventanilla
+                    </div>
                 </div>
                 <div class="map-detail-bar">
-                    <span class="map-detail-text"><i class="fas fa-location-arrow text-primary mr-1"></i> Referencia: Frente a la Comisaría</span>
-                    <a href="https://maps.google.com" target="_blank" class="specialty-link" style="font-size: 0.75rem;">Cómo llegar <i class="fas fa-external-link-alt"></i></a>
+                    <span class="map-detail-text"><i class="fas fa-location-arrow text-primary mr-1"></i> Referencia:
+                        Frente a la Comisaría</span>
+                    <a href="https://maps.google.com" target="_blank" class="specialty-link"
+                        style="font-size: 0.75rem;">Cómo llegar <i class="fas fa-external-link-alt"></i></a>
                 </div>
             </div>
         </div>
@@ -2023,14 +1959,15 @@
                     </div>
                     <span class="logo-main" style="font-size: 1.15rem;">Carrión</span>
                 </a>
-                <p class="footer-text">Líderes en el cuidado de la salud en la Ciudad Satélite de Ventanilla. Brindando salud y bienestar familiar desde hace más de 25 años.</p>
+                <p class="footer-text">Líderes en el cuidado de la salud en la Ciudad Satélite de Ventanilla. Brindando
+                    salud y bienestar familiar desde hace más de 25 años.</p>
                 <div class="footer-socials">
                     <a href="#" class="social-link"><i class="fab fa-facebook-f"></i></a>
                     <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
                     <a href="#" class="social-link"><i class="fab fa-whatsapp"></i></a>
                 </div>
             </div>
-            
+
             <div class="footer-column">
                 <h4>Enlaces Rápidos</h4>
                 <ul class="footer-links">
@@ -2055,14 +1992,19 @@
 
             <div class="footer-column">
                 <h4>Contacto Satélite</h4>
-                <p class="footer-text" style="margin-bottom: 0.75rem;"><i class="fas fa-map-marker-alt text-secondary mr-2"></i> Av. Pedro Beltrán 175, Ventanilla, Callao.</p>
-                <p class="footer-text" style="margin-bottom: 0.75rem;"><i class="fas fa-phone-alt text-secondary mr-2"></i> (01) 553-1610</p>
-                <p class="footer-text"><i class="fas fa-envelope text-secondary mr-2"></i> consultas@clinicacarrion.pe</p>
+                <p class="footer-text" style="margin-bottom: 0.75rem;"><i
+                        class="fas fa-map-marker-alt text-secondary mr-2"></i> Av. Pedro Beltrán 175, Ventanilla,
+                    Callao.</p>
+                <p class="footer-text" style="margin-bottom: 0.75rem;"><i
+                        class="fas fa-phone-alt text-secondary mr-2"></i> (01) 553-1610</p>
+                <p class="footer-text"><i class="fas fa-envelope text-secondary mr-2"></i> consultas@clinicacarrion.pe
+                </p>
             </div>
         </div>
-        
+
         <div class="container footer-bottom">
-            <p class="margin-bottom-0">&copy; 2026 Clínica Carrión de Ventanilla (Policlínico Carrión S.A.). Todos los derechos reservados.</p>
+            <p class="margin-bottom-0">&copy; 2026 Clínica Carrión de Ventanilla (Policlínico Carrión S.A.). Todos los
+                derechos reservados.</p>
             <p class="margin-bottom-0" style="color: #64748b;">Desarrollado con Integridad Local Soberana</p>
         </div>
     </footer>
@@ -2072,7 +2014,7 @@
         // 1. Alternador de Tema Oscuro / Claro Premium
         const themeToggleBtn = document.getElementById("themeToggle");
         const themeIcon = themeToggleBtn.querySelector("i");
-        
+
         // Cargar preferencia guardada
         if (localStorage.getItem("theme_preference") === "dark") {
             document.body.classList.add("dark-theme");
@@ -2105,7 +2047,7 @@
             // Actualizar botones de filtro
             const buttons = document.querySelectorAll(".filter-btn");
             buttons.forEach(btn => btn.classList.remove("active"));
-            
+
             // Agregar active al correspondiente
             event.target.classList.add("active");
 
@@ -2127,7 +2069,7 @@
         // 4. Motor de Reserva de Citas en LocalStorage (Soberanía de Datos)
         function registrarCita(event) {
             event.preventDefault();
-            
+
             const nombre = document.getElementById("pacienteNombre").value.trim();
             const telefono = document.getElementById("pacienteTelefono").value.trim();
             const especialidad = document.getElementById("pacienteEspecialidad").value;
@@ -2161,7 +2103,7 @@
             // Mostrar mensaje de éxito
             document.getElementById("appointmentForm").reset();
             document.getElementById("bookingCode").innerText = codigoReserva;
-            
+
             // Ocultar formulario momentáneamente y mostrar banner
             document.getElementById("appointmentForm").style.display = "none";
             const successBanner = document.getElementById("bookingSuccessMessage");
@@ -2192,7 +2134,7 @@
         function renderCitasAdmin() {
             const tbody = document.getElementById("adminTableBody");
             const citas = JSON.parse(localStorage.getItem("citas_clinica_carrion")) || [];
-            
+
             if (citas.length === 0) {
                 tbody.innerHTML = `
                     <tr>
@@ -2230,4 +2172,8 @@
         document.getElementById('pacienteFecha').setAttribute('min', today);
     </script>
 </body>
+
+</html>
+</body>
+
 </html>
