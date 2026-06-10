@@ -1993,15 +1993,17 @@
 
             <!-- Interactivo Mock Map Rendered completely in CSS for gorgeous look -->
             <div class="map-card-wrapper">
-                <div class="map-view-mock">
-                    <div class="map-grid-decor"></div>
-                    <div class="map-marker-clinical">
-                        <i class="fas fa-hospital"></i>
-                    </div>
-                    <div class="map-marker-pulse"></div>
-                    <div style="position: absolute; bottom: 15px; left: 15px; background: rgba(0,0,0,0.7); color: white; padding: 4px 10px; border-radius: 4px; font-size: 0.75rem; z-index: 3;">
-                        Satélite, Ventanilla
-                    </div>
+                <div class="map-view-mock" style="padding: 0; overflow: hidden; border-radius: 12px 12px 0 0;">
+                    <iframe 
+                        src="https://maps.google.com/maps?q=Av.%20Pedro%20Beltr%C3%A1n%20175,%20Ventanilla,%20Callao,%20Peru&t=&z=16&ie=UTF8&iwloc=&output=embed" 
+                        width="100%" 
+                        height="100%" 
+                        frameborder="0" 
+                        style="border:0; position: absolute; top: 0; left: 0; width: 100%; height: 100%;" 
+                        allowfullscreen="" 
+                        aria-hidden="false" 
+                        tabindex="0">
+                    </iframe>
                 </div>
                 <div class="map-detail-bar">
                     <span class="map-detail-text"><i class="fas fa-location-arrow text-primary mr-1"></i> Referencia: Frente a la Comisaría</span>
